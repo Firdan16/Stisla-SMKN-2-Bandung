@@ -7,12 +7,20 @@
 @section('inputdata')
     <form method= "POST" action="/simpanData">
       @csrf
+
+      @if ($message = Session::get('sukses'))
+        <div class="alert alert-success alert-block">
+          <button type="button" class="close" data dismiss="alert">x</button>
+          <strong style="font-size: 20px">{{ $message }}</strong>
+        </div>
+      @endif  
+
       <div class="card">
         <div class="card-body">
           <div class="row">
             <div class="col">
+                  <div class="section-title">Nama</div>
                   <div class="form-group">
-                    <label> Nama </label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
@@ -70,7 +78,7 @@
                             <i class="fas fa-calendar-alt"></i>
                         </div>
                       </div>
-                      <input type="text" class="form-control currency" name="tgl">
+                      <input type="date" class="form-control currency" name="tgl">
                       @if ($errors->has('tgl'))
                             <div class ="class">
                               {{$errors->first('tgl')}}

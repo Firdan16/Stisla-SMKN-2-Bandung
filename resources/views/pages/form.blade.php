@@ -31,7 +31,7 @@
           <div class="section-body">
 
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-6">
+                <div class="col">
                   <div class="card">
                     <div class="card-header">
                       <h4>Input Text</h4>
@@ -74,16 +74,15 @@
                         <label> Tanggal Lahir </label>
                         <div class="input-group">
                           <div class="input-group-prepend">
-                            <div class="input-group-text">
+                            <div class="input-group-date">
                                 <i class="fas fa-times"></i>
                             </div>
                           </div>
-                          <input type="text" class="form-control currency" name="tgl">
+                          <input type="date" class="form-control currency" name="tgl">
                         </div>
                       </div>
                     </div>
                   </div>
-
           </div>
         </section>
       </div>

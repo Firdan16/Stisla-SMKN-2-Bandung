@@ -22,31 +22,21 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col"> No </th>
               <th scope="col"> Nama </th>
+              <th scope="col"> Kelas </th>
               <th scope="col"> NIS </th>
-              <th scope="col"> No Telepon </th>
+              <th scope="col"> Tanggal </th>
             </tr>
           </thead>
           <tbody>
+            @foreach($bio as $p)
             <tr>
-              <th scope="row"> 1 </th>
-              <td> Dziki Mosses </td>
-              <td> 12026312 </td>
-              <td> 098765432109 </td>
+              <td> {{$p->nama}} </td>
+              <td> {{$p->kelas}} </td>
+              <td> {{$p->nis}} </td>
+              <td> {{$p->tgl}} </td>
             </tr>
-            <tr>
-              <th scope="row"> 2 </th>
-              <td> Gintara Saputra </td>
-              <td> 12026322 </td>
-              <td> 089678409876 </td>
-            </tr>
-            <tr>
-              <th scope="row"> 3 </th>
-              <td> Kevin Praditya </td>
-              <td> 12026332 </td>
-              <td> 087567846571 </td>
-            </tr>
+            @endforeach
           </tbody>
         </table>
       </div>
@@ -69,31 +59,21 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col"> No </th>
             <th scope="col"> Nama </th>
+            <th scope="col"> Kelas </th>
             <th scope="col"> NIS </th>
-            <th scope="col"> No Telepon </th>
+            <th scope="col"> Tanggal </th>
           </tr>
         </thead>
         <tbody>
+          @foreach($bio as $p)
           <tr>
-            <th scope="row"> 1 </th>
-            <td> Dziki Mosses </td>
-            <td> 12026312 </td>
-            <td> 098765432109 </td>
+            <td> {{$p->nama}} </td>
+            <td> {{$p->kelas}} </td>
+            <td> {{$p->nis}} </td>
+            <td> {{$p->tgl}} </td>
           </tr>
-          <tr>
-            <th scope="row"> 2 </th>
-            <td> Gintara Saputra </td>
-            <td> 12026322 </td>
-            <td> 089678409876 </td>
-          </tr>
-          <tr>
-            <th scope="row"> 3 </th>
-            <td> Kevin Praditya </td>
-            <td> 12026332 </td>
-            <td> 087567846571 </td>
-          </tr>
+          @endforeach
         </tbody>
       </table>
     </div>
@@ -116,31 +96,21 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col"> No </th>
           <th scope="col"> Nama </th>
+          <th scope="col"> Kelas </th>
           <th scope="col"> NIS </th>
-          <th scope="col"> No Telepon </th>
+          <th scope="col"> Tanggal </th>
         </tr>
       </thead>
       <tbody>
+        @foreach($bio as $p)
         <tr>
-          <th scope="row"> 1 </th>
-          <td> Dziki Mosses </td>
-          <td> 12026312 </td>
-          <td> 098765432109 </td>
+          <td> {{$p->nama}} </td>
+          <td> {{$p->kelas}} </td>
+          <td> {{$p->nis}} </td>
+          <td> {{$p->tgl}} </td>
         </tr>
-        <tr>
-          <th scope="row"> 2 </th>
-          <td> Gintara Saputra </td>
-          <td> 12026322 </td>
-          <td> 089678409876 </td>
-        </tr>
-        <tr>
-          <th scope="row"> 3 </th>
-          <td> Kevin Praditya </td>
-          <td> 12026332 </td>
-          <td> 087567846571 </td>
-        </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
@@ -162,31 +132,21 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col"> No </th>
                 <th scope="col"> Nama </th>
+                <th scope="col"> Kelas </th>
                 <th scope="col"> NIS </th>
-                <th scope="col"> No Telepon </th>
+                <th scope="col"> Tanggal </th>
               </tr>
             </thead>
             <tbody>
+              @foreach($bio as $p)
               <tr>
-                <th scope="row"> 1 </th>
-                <td> Dziki Mosses </td>
-                <td> 12026312 </td>
-                <td> 098765432109 </td>
+                <td> {{$p->nama}} </td>
+                <td> {{$p->kelas}} </td>
+                <td> {{$p->nis}} </td>
+                <td> {{$p->tgl}} </td>
               </tr>
-              <tr>
-                <th scope="row"> 2 </th>
-                <td> Gintara Saputra </td>
-                <td> 12026322 </td>
-                <td> 089678409876 </td>
-              </tr>
-              <tr>
-                <th scope="row"> 3 </th>
-                <td> Kevin Praditya </td>
-                <td> 12026332 </td>
-                <td> 087567846571 </td>
-              </tr>
+              @endforeach
             </tbody>
           </table>
         </div>

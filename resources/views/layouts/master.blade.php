@@ -34,6 +34,8 @@
                 @yield('inputdata')
             </div>
         </section>
+
+      @include('layouts.footer')  
     </div>                       
    
   <!-- General JS Scripts -->

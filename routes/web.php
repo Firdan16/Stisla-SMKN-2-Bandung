@@ -14,12 +14,14 @@ use App\Http\Controllers\bioController;
 |
 */
 
-Route::get('/tampil', function () {
-    return view('pages.tampil');
-});
+// Route::get('/tampil', function () {
+//     return view('pages.tampil');
+// });
 
 Route::get('/input', function () {
     return view('pages.input');
 });
 
 Route::post('/simpanData', [bioController::class,'simpanData']);
+
+Route::get('/tampil', [bioController::class,'index']);
