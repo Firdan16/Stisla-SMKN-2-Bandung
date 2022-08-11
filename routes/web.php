@@ -18,10 +18,18 @@ use App\Http\Controllers\bioController;
 //     return view('pages.tampil');
 // });
 
-Route::get('/input', function () {
-    return view('pages.input');
+Route::get('/rgTampil', function () {
+    return view('register.rgTampil');
 });
 
 Route::post('/simpanData', [bioController::class,'simpanData']);
 
 Route::get('/tampil', [bioController::class,'index']);
+
+Route::get('/ubah/{id}', [bioController::class,'ubah']);
+Route::PUT('/perbaharui/{id}', [bioController::class,'data']);
+
+Route::delete('/hapus/{id}',[bioController::class,'hapusData'])->name('hapus');
+
+// Web  Register
+
