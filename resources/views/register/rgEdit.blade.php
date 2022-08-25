@@ -5,7 +5,7 @@
 @section('title','Form Input Data')
 
 @section('inputdata')
-    <form method= "POST" action="/perbaharui/{{$bioUbah->id}}">
+    <form method= "POST" action="/updateData/{{$bioUbah->id}}">
       @csrf
       @method('PUT')
 
@@ -20,15 +20,15 @@
         <div class="card-body">
           <div class="row">
             <div class="col">
-                  <div class="section-title">Nama</div>
                   <div class="form-group">
+                    <label> Nama </label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
                           <i class="fas fa-user"></i>
                         </div>
                       </div>
-                      <input type="text" class="form-control phone-number" name="nama" value="{{$bioUbah->nama}}">
+                      <input type="text" class="form-control phone-number" name="nama" placeholder="Nama" value="{{$bioUbah->nama}}">
                           @if ($errors->has('nama'))
                           <div class ="class">
                             {{$errors->first('nama')}}
@@ -37,52 +37,35 @@
                     </div>
 
                   </div>
-                  <div class="section-title">Kelas</div>
                   <div class="form-group">
+                    <label> Email </label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
                           <i class="fas fa-code"></i>
                         </div>
                       </div>
-                      <input type="text" class="form-control phone-number" name="kelas" value="{{$bioUbah->kelas}}">
-                          @if ($errors->has('kelas'))
+                      <input type="text" class="form-control phone-number" name="email" placeholder="Email" value="{{$bioUbah->email}}">
+                          @if ($errors->has('email'))
                           <div class ="class">
-                            {{$errors->first('kelas')}}
+                            {{$errors->first('email')}}
                           </div>
                           @endif
                     </div>
 
                   </div>
-                  <div class="section-title">NIS</div>
                   <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="fas fa-briefcase"></i>
-                        </div>
-                      </div>
-                      <input type="text" class="form-control pwstrength" name="nis" value="{{$bioUbah->nis}}">
-                            @if ($errors->has('nis'))
-                            <div class ="class">
-                              {{$errors->first('nis')}}
-                            </div>
-                          @endif
-                   </div>
-
-                  </div>
-                  <div class="section-title">Tanggal Lahir</div>
-                  <div class="form-group">
+                    <label> Password </label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
                             <i class="fas fa-calendar-alt"></i>
                         </div>
                       </div>
-                      <input type="date" class="form-control currency" name="tgl" value="{{$bioUbah->tgl}}">
-                      @if ($errors->has('tgl'))
+                      <input type="password" class="form-control currency" name="password" value="{{$bioUbah->password}}">
+                      @if ($errors->has('password'))
                             <div class ="class">
-                              {{$errors->first('tgl')}}
+                              {{$errors->first('password')}}
                             </div>
                           @endif
                    </div>

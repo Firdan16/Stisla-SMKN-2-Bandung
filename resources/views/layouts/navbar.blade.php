@@ -30,7 +30,7 @@
               </div>
               <div class="search-item">
                 <a href="#">
-                  <img class="mr-3 rounded" width="30" src="{{asset('assets/img/products/product-3-50.png')}} alt="product">
+                  <img class="mr-3 rounded" width="30" src="{{asset('assets/img/products/product-3-50.png')}}" alt="product">
                   oPhone S9 Limited Edition
                 </a>
               </div>
@@ -112,7 +112,7 @@
                 </a>
                 <a href="#" class="dropdown-item">
                   <div class="dropdown-item-avatar">
-                    <img alt="image" src="{{asset('assets/img/avatar/avatar-4.png')}} class="rounded-circle">
+                    <img alt="image" src="{{asset('assets/img/avatar/avatar-4.png')}}" class="rounded-circle">
                   </div>
                   <div class="dropdown-item-desc">
                     <b>Ardian Rahardiansyah</b>
@@ -210,7 +210,7 @@
                 <i class="fas fa-cog"></i> Settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item has-icon text-danger">
+              <a href="lgTampil" class="dropdown-item has-icon text-danger">
                 <i class="fas fa-sign-out-alt"></i> Logout
               </a>
             </div>

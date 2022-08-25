@@ -11,7 +11,7 @@ class RgController extends Controller
 {
     public function index(){
         $bio=User::all();
-        return view('',['bio'=>$bio]);
+        return view('register.rgTampil',['bio'=>$bio]);
     }
 
     public function addData(Request $request){
@@ -29,23 +29,23 @@ class RgController extends Controller
         //     'tgl.required'=>'Tanggal harus diisi',
         // ]);
 
-        $data=rpl2model::create([
+        $data=User::create([
             'nama'=>$request->nama,
             'email'=>$request->email,
             'password'=>$request->password,
         ]);
 
         if($data){
-            Session::flash('sukses','Tambah data sukses!');
-            return redirect('');
+            // Session::flash('sukses','Tambah data sukses!');
+            return redirect('/rgTambah');
         }
         // dd($data);
     }
 
-    public function ubah($id){
+    public function updateData($id){
         $bioUbah=User::findOrFail($id);
         // dd($bioUbah);die();
-        return view('', ['bioUbah' => $bioUbah]);
+        return view('register.rgEdit', ['bioUbah' => $bioUbah]);
     }
 
     public function data($id, Request $request){
@@ -70,14 +70,14 @@ class RgController extends Controller
         $bioupdate->password=$request->password;
         $bioupdate->save();
 
-        Session::flash('sukses','Updata Data Berhasil!');
-        return redirect('');
+        Session::flash('sukses','Update Data Berhasil!');
+        return redirect('/rgTampil');
     }
 
     public function deleteData($idHapus){
         $bioHapus=User::findOrFail($idHapus);
         $bioHapus->delete();
         Session::flash('sukses','Hapus Data Berhasil!');
-        return redirect('');
+        return redirect('/rgTampil');
     }
 }
