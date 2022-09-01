@@ -9,6 +9,10 @@ use Session;
 
 class bioController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('check');
+    }
     public function index(){
         $bio=rpl2model::all();
         return view('pages.tampil',['bio'=>$bio]);

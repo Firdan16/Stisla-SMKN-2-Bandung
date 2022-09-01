@@ -27,7 +27,16 @@
             <img src="../assets/img/12.png" alt="logo" width="80" class="shadow-light rounded-circle mb-5 mt-2">
             <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Two Tech</span></h4>
             <p class="text-muted">Before you get started, you must login or register if you don't already have an account.</p>
-            <form method="POST" action="#" class="needs-validation" novalidate="">
+            
+            @if ($message = Session::get('sukses'))
+             <div class="alert alert-danger alert-block">
+                <button type="button" class="close" data dismiss="alert">x</button>
+                <strong style="font-size: 20px">{{ $message }}</strong>
+               </div>
+             @endif  
+
+            <form method="POST" action="/authlogin" class="needs-validation" novalidate="">
+              @csrf
               <div class="form-group">
                 <label for="email">Email</label>
                 <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
@@ -58,9 +67,9 @@
                   Forgot Password?
                 </a>
                 <div>
-                    <a href="tampil" class="btn btn-danger btn-lg btn-icon icon-right">
-                     Login
-                    </a>
+                  <button type="submit" class="btn btn-danger btn-lg btn-icon btn-right" tabindex="4" >
+                    Login
+                  </button>
                   </div>
               </div>
 

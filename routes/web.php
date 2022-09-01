@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\bioController;
 use App\Http\Controllers\RgController;
+use App\Http\Controllers\LgController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,9 +51,18 @@ Route::PUT('/updateData/{id}', [RgController::class,'data']);
 Route::delete('/hapus/{id}',[RgController::class,'deleteData'])->name('hapus');
 
 
-
 // Web Login
 
 Route::get('/lgTampil', function () {
     return view('login.lgTampil');
+});
+
+Route::post('/authlogin', [LgController::class,'Login']);
+
+Route::get('/navbar', [RgController::class,'index']);
+
+
+Route::get('/logout', function(){
+    Auth::logout();
+        return redirect('/lgTampil');
 });

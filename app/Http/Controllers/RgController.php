@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 use Session;
 
 class RgController extends Controller
 {
+    public function __construct(){
+        $this->middleware('check');
+    }
+    
     public function index(){
         $bio=User::all();
         return view('register.rgTampil',['bio'=>$bio]);
@@ -32,7 +37,7 @@ class RgController extends Controller
         $data=User::create([
             'nama'=>$request->nama,
             'email'=>$request->email,
-            'password'=>$request->password,
+            'password'=>Hash::make($request->password),
         ]);
 
         if($data){

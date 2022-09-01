@@ -42,7 +42,7 @@
             <tr>
               <td> {{$p->nama}} </td>
               <td> {{$p->email}} </td>
-              <td> {{$p->password}} </td>
+              <td> ******** </td>
               <td>
                 <form action="{{route('hapus',$p->id)}}" method="POST">
                   @csrf
