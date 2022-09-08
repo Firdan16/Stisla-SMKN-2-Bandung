@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\rpl2Model;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 use Session;
 
@@ -17,6 +19,18 @@ class bioController extends Controller
         $bio=rpl2model::all();
         return view('pages.tampil',['bio'=>$bio]);
     }
+    public function profile(){
+        return view('pages.profile',[
+            "biodata"=>rpl2model::where('nama', Auth::user()->nama)->firstOrFail()
+        ]);
+    }
+
+    // public function join(){
+    //     return DB::table('users')
+    //     ->join('rpl2models','users.nama',"=",'rpl2models.nama')
+    //     ->select('rpl2models.nama','users.email','rpl2models.nis','rpl2models.kelas','rpl2models.tgl')
+    //     ->get();
+    // }
 
     public function simpanData(Request $request){
         // $request->validate([

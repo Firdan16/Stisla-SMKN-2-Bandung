@@ -33,6 +33,12 @@ Route::PUT('/perbaharui/{id}', [bioController::class,'data']);
 
 Route::delete('/hapus/{id}',[bioController::class,'hapusData'])->name('hapus');
 
+Route::get('/profile', [bioController::class,'profile']);
+
+// Route::get('/profile', function () {
+//     return view('pages.profile');
+// });
+
 
 
 // Web  Register
@@ -52,6 +58,7 @@ Route::delete('/hapus/{id}',[RgController::class,'deleteData'])->name('hapus');
 
 
 // Web Login
+
 
 Route::get('/lgTampil', function () {
     return view('login.lgTampil');

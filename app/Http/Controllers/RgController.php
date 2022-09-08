@@ -10,9 +10,9 @@ use Session;
 
 class RgController extends Controller
 {
-    public function __construct(){
-        $this->middleware('check');
-    }
+    // public function __construct(){
+    //     $this->middleware('check');
+    // }
     
     public function index(){
         $bio=User::all();
