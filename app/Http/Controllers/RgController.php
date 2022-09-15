@@ -41,8 +41,8 @@ class RgController extends Controller
         ]);
 
         if($data){
-            // Session::flash('sukses','Tambah data sukses!');
-            return redirect('/rgTambah');
+            Session::flash('sukses','Tambah data sukses!');
+            return redirect('/lgTampil');
         }
         // dd($data);
     }
@@ -82,7 +82,13 @@ class RgController extends Controller
     public function deleteData($idHapus){
         $bioHapus=User::findOrFail($idHapus);
         $bioHapus->delete();
-        Session::flash('sukses','Hapus Data Berhasil!');
-        return redirect('/rgTampil');
+        
+        return redirect('/rgTampil')->with('sukses','Berhasil Menghapus Data!');
+    }
+
+    public function searchReg(Request $request){
+        $searchResult = $request->search;
+        $result=User::where('nama','like',"%".$searchResult."%")->paginate();
+        return view('register.rgSearch',['bio' => $result]);
     }
 }

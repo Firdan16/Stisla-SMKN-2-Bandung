@@ -6,8 +6,7 @@
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
           <div class="search-element">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
-            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+            <form action="" method="">
             <div class="search-backdrop"></div>
             <div class="search-result">
               <div class="search-header">
@@ -31,19 +30,19 @@
               <div class="search-item">
                 <a href="#">
                   <img class="mr-3 rounded" width="30" src="{{asset('assets/img/products/product-3-50.png')}}" alt="product">
-                  oPhone S9 Limited Edition
+                  Google Pixel 6
                 </a>
               </div>
               <div class="search-item">
                 <a href="#">
                   <img class="mr-3 rounded" width="30" src="{{asset('assets/img/products/product-2-50.png')}}" alt="product">
-                  Drone X2 New Gen-7
+                  Yamaha XSR 155
                 </a>
               </div>
               <div class="search-item">
                 <a href="#">
                   <img class="mr-3 rounded" width="30" src="{{asset('assets/img/products/product-1-50.png')}}" alt="product">
-                  Headphone Blitz
+                  PC High-end
                 </a>
               </div>
               <div class="search-header">

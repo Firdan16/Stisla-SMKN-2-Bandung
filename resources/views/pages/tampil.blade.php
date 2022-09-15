@@ -17,6 +17,12 @@
       @endif  
 
 <div class="column">
+  <div class="mb-4">
+    <form action="search" method="GET">
+      <input class="form-control btn btn-outline-danger" type="text" name="search" placeholder="Search here" data-width="250">
+      <button class="btn"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
     <div class="card card-primary mr-4 col ">
       <div class="card-header">
         <h4>XII RPL 1</h4>
@@ -49,7 +55,7 @@
                 <form action="{{route('hapus',$p->id)}}" method="POST">
                   @csrf
                   @method('DELETE')
-                  <a href="/ubah/{{$p->id}}" class="btn btn-warning btn-sm">Edit</a>
+                  <a href="/ubah/{{$p->id}}" class="btn btn-warning btn-sm">Edit<a>
                   <Button type="submit" class="btn btn-danger btn-sm">Hapus</Button>
                 </form> 
               </td>

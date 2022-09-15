@@ -28,7 +28,6 @@
           <ul class="dropdown-menu">
             <li><a href="tampil">Data Kelas</a></li>
             <li><a href="rgTampil">Data Register</a></li>
-            <li><a href="rgEdit">Edit Register</a></li>
           </ul>
         </li>
 

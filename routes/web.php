@@ -35,6 +35,8 @@ Route::delete('/hapus/{id}',[bioController::class,'hapusData'])->name('hapus');
 
 Route::get('/profile', [bioController::class,'profile']);
 
+Route::get('/search', [bioController::class,'search']);
+
 // Route::get('/profile', function () {
 //     return view('pages.profile');
 // });
@@ -55,6 +57,8 @@ Route::get('/rgEdit/{id}', [RgController::class,'updateData']);
 Route::PUT('/updateData/{id}', [RgController::class,'data']);
 
 Route::delete('/hapus/{id}',[RgController::class,'deleteData'])->name('hapus');
+
+Route::get('/searchReg', [RgController::class,'searchReg']);
 
 
 // Web Login

@@ -16,6 +16,7 @@ class bioController extends Controller
         $this->middleware('check');
     }
     public function index(){
+
         $bio=rpl2model::all();
         return view('pages.tampil',['bio'=>$bio]);
     }
@@ -97,7 +98,13 @@ class bioController extends Controller
     public function hapusData($idHapus){
         $bioHapus=rpl2model::findOrFail($idHapus);
         $bioHapus->delete();
-        Session::flash('sukses','Hapus Data Berhasil!');
-        return redirect('/tampil');
+        
+        return redirect('/rgTampil')->with('sukses','Berhasil Menghapus Data!');
+    }
+
+    public function search(Request $request){
+        $searchResult = $request->search;
+        $result=rpl2model::where('nama','like',"%".$searchResult."%")->paginate();
+        return view('pages.search',['bio' => $result]);
     }
 }
